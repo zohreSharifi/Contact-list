@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+header{
+    display: flex;
+    justify-content: center;
+    border:2px solid #ede9fe;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+footer{
+    position: fixed;
+    bottom: 0;
+    background-color: #efefee;
+    width: 100%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* form{
+    min-height: 200px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+} */
+.formInput{
+    display: flex;
+    flex-direction: column;
+   margin-bottom: 20px;
+    
+}
+label{
+    font-weight: bold;
+    padding:5px ;
+}
+input{
+    width: 50rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border:1px solid #ede9fe;
+    outline: none;
+
 }
 
-.App-link {
-  color: #61dafb;
+.addBtn {
+    display: block;
+    background-color:  #3b82f6;
+    color: #dbeafe;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* contact-list */
+.contactList{
+    border:1px solid #ede9fe;
+    display: flex;
+    justify-content: space-between;
+    width: 51rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 30px;
+  
+}
+.contactUser{
+    display: flex;
+    flex-direction: column;
+}
+.contactUser p{
+    padding: 0;
+    margin: 0;
+}
+.deleteBtn{
+    background-color: #fff;
+    color: rgb(234, 113, 113);
+    border: 1px solid rgb(234, 113, 113);
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.userName{
+    font-weight: bold;
 }
