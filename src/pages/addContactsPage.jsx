@@ -1,26 +1,32 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { postContact } from "../services/postContactServices";
 
-const AddContact = ({ onSubmit }) => {
+const AddContacts = () => {
+    const navigate = useNavigate();
     const [contact, setContact] = useState({ name: "", email: "", id: null });
 
     const changeHandler = (e) => {
         setContact({
             ...contact,
             [e.target.name]: e.target.value,
-            id: Math.floor(Math.random() * 100),
+            id: new Date().getTime(),
         });
     };
 
-    const submitHandler = (e) => {
+    const submitHandler = async(e) => {
         if (!contact.name || !contact.email) {
             alert("all fildes are mandatory  ! ");
             return;
         }
         e.preventDefault();
-        onSubmit(contact);
-        setContact({ name: "", email: "", id: null });
+        try {
+            await postContact(contact);
+        } catch (error) {}
+      
+        navigate("/");
     };
-
+  
     return (
         <section>
             <h2>Add Contact</h2>
@@ -53,4 +59,4 @@ const AddContact = ({ onSubmit }) => {
     );
 };
 
-export default AddContact;
+export default AddContacts;

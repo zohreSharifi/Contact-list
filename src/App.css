@@ -1,7 +1,12 @@
+*{
+    list-style: none;
+    text-decoration: none;
+}
 header{
     display: flex;
     justify-content: center;
     border:2px solid #ede9fe;
+    padding: 20px 0;
 }
 footer{
     position: fixed;
@@ -9,21 +14,24 @@ footer{
     background-color: #efefee;
     width: 100%;
 }
-.App{
+.App {
     display: flex;
     justify-content: center;
-    align-items: center;
+    flex-direction: column;
+   align-items: center;
+    background-color: #f6f6f6;
+    width: 100%;
+    /* height: 100vh; */
 }
-/* form{
-    min-height: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-} */
-.formInput{
+
+
+
+/* .............. Add new contact */
+.formControl{
     display: flex;
     flex-direction: column;
    margin-bottom: 20px;
+   align-items: flex-start;
     
 }
 label{
@@ -34,31 +42,67 @@ input{
     width: 50rem;
     padding: 10px 20px;
     border-radius: 5px;
-    border:1px solid #ede9fe;
+    border:1px solid #ccc;
     outline: none;
 
 }
 
 .addBtn {
     display: block;
-    background-color:  #3b82f6;
-    color: #dbeafe;
+    background-color:  #6D28d9;
+    color: #fff;
     border: none;
-    border-radius: 3px;
-    padding: 10px 20px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
 }
 
 
-/* contact-list */
+
+
+/* ...............   contact-list */
+
+.contactHeader{
+    display: flex;
+    width: 30rem;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
 .contactList{
     border:1px solid #ede9fe;
     display: flex;
     justify-content: space-between;
-    width: 51rem;
+    width: 30rem;
     padding: 5px 10px;
     border-radius: 5px;
     margin-top: 30px;
   
+}
+
+.searchBox{
+    display: flex;
+    width: 30rem;
+    margin-top: 3rem;
+
+}
+.searchBox input,button{
+    border: none;
+    outline: none;
+}
+.searchBox button{
+   background-color: #fff;
+   color: #6D28d9;
+   font-weight: bold;
+   padding-right: 1rem;
+   cursor: pointer;
+
+   
+}
+.contactLink{
+display: flex;
+align-items: center;
+justify-content: center;
 }
 .contactUser{
     display: flex;
@@ -68,13 +112,32 @@ input{
     padding: 0;
     margin: 0;
 }
+.btnSection{
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+}
 .deleteBtn{
     background-color: #fff;
-    color: rgb(234, 113, 113);
-    border: 1px solid rgb(234, 113, 113);
+    color: #dc2626;
+    border: 1px solid #dc2626;
     border-radius: 5px;
     padding: 5px 10px;
+    cursor: pointer;
+}
+.editBtn{
+    background-color: #fff;
+    color: #6D28d9;
+    border: 1px solid #6D28d9;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
 }
 .userName{
     font-weight: bold;
+}
+.userImage{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
 }
